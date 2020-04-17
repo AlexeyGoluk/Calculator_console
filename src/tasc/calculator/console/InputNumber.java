@@ -6,6 +6,7 @@ public class InputNumber {
     private RomeNumber rome_number;
     private StringBuilder line_date;
     private char symbol;
+    private boolean branch;
     private int number_first,number_second;
 
     InputNumber(){
@@ -56,10 +57,12 @@ public class InputNumber {
         if(rome_number.checkArg1(arrLine[0]) && rome_number.checkArg2(arrLine[1])){
             number_first = rome_number.getRome_number_first();
             number_second = rome_number.getRome_number_second();
+            branch = true;
 
         } else{
             number_first = Integer.parseInt(arrLine[0]);
             number_second = Integer.parseInt(arrLine[1]);
+            branch = true;
         }
     }
 
@@ -74,4 +77,5 @@ public class InputNumber {
     public char getSymbol(){
         return symbol;
     }
+    public boolean getBranch(){ return branch; }
 }
