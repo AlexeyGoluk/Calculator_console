@@ -62,7 +62,6 @@ public class InputNumber {
         } else{
             number_first = Integer.parseInt(arrLine[0]);
             number_second = Integer.parseInt(arrLine[1]);
-            branch = true;
         }
     }
 
